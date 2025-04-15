@@ -1,95 +1,59 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+// import {ReactComponent as XLogo} from '../../public/x_logo.svg';
+// import XLogo from '@/assets/x_logo.svg';
+import XLogo from 'public/x_logo.svg';
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <div className={styles.container}>
+      <div className={styles.left}>
+        <XLogo className={styles.logo} />
+      </div>
+      <div className={styles.right}>
+        <div>
+          <div>
+            <h1>지금 일어나고 있는 일</h1>
+          </div>
+          <div>
+            <h2>지금 가입하세요.</h2>
+          </div>
+          <div>
+            {/* <div>
+              <button>Apple에서 가입하기</button>
+            </div>
+            <div>
+              <div></div>
+              <div>
+                <div>
+                  <span>또는</span>
+                </div>
+              </div>
+              <div></div>
+            </div> */}
+            <Link className={styles.signup} href='/i/flow/signup'>계정 만들기</Link>
+            {/* <div>
+              가입하시려면 
+              <Link href='#'><span>쿠키 사용</span></Link>
+              을 포함해 
+              <Link href='#'><span>이용약관</span></Link>
+              과 
+              <Link href='#'><span>개인정보 처리방침</span></Link>
+              에 동의해야 합니다.
+            </div> */}
+            <div>
+              <div>
+                <h3>이미 트위터에 가입하셨나요?</h3>
+              </div>
+              <Link href='/login'>
+                <div className={styles.login}>
+                  <span>로그인</span>
+                </div>
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
