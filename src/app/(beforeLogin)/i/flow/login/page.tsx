@@ -1,7 +1,7 @@
-"use client";
+import LoginModal from "@/app/(beforeLogin)/_component/LoginModal";
 
 export default function Page() {
   return (
-    <div>기본 로그인 페이지</div>
+    <LoginModal />
   )
 }

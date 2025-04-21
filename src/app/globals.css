@@ -44,7 +44,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 231, 233, 234;
     --background-start-rgb: 0, 0, 0;
@@ -75,7 +75,7 @@ svg:not(:root) {
     --card-rgb: 100, 100, 100;
     --card-border-rgb: 200, 200, 200;
   }
-} */
+}
 
 * {
   box-sizing: border-box;
