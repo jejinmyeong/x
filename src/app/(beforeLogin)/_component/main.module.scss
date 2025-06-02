@@ -1,0 +1,205 @@
+@use '@/styles/abstracts' as global;
+@use '../_styles/abstracts/beforelogin.variables' as local;
+
+.container {
+  flex-shrink: 1;
+  flex-grow: 1;
+  
+  .wrapper {
+    flex: 1;
+
+    .inner {
+      min-height: auto;
+
+      @include global.respond(local.$breakpoint-sm) {
+        min-width: 45vw;
+        max-width: 600px;
+        justify-content: center;
+        width: 100%;
+        padding: 16px;
+        margin: auto;
+      }
+      @include global.respond(local.$breakpoint-lg) {
+        flex-direction: row-reverse;
+        flex: 1 1 auto;
+      }
+      
+      .signUpContainer {
+        padding: 16px;
+        justify-content: center;
+        min-width: 45vw;
+
+        .mobileLogo {
+          height: 3rem;
+          padding-bottom: 12px;
+          align-self: flex-start;
+          max-width: 100%;
+
+          @include global.respond(local.$breakpoint-lg) {
+            display: none;
+          }
+        }
+    
+        .signUpWrapper {
+          padding: 20px;
+        
+          .title {
+            color: rgb(15, 20, 25);
+            line-height: 52px;
+            letter-spacing: -0.8px;
+            font-size: 40px;
+            word-wrap: break-word;
+            min-width: 0px;
+            font-weight: 700;
+            text-align: inherit;
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+            @include global.respond(local.$breakpoint-sm) {
+              margin: 48px 0;
+              font-weight: 700;
+              font-size: 64px;
+              line-height: 84px;
+              word-wrap: break-word;
+            }
+          }
+    
+          .subTitle {
+            color: rgb(15, 20, 25);
+            line-height: 28px;
+            letter-spacing: -0.8px;
+            font-size: 23px;
+            word-wrap: break-word;
+            min-width: 0px;
+            font-weight: 700;
+            text-align: inherit;
+            margin-bottom: 20px;
+
+            @include global.respond(local.$breakpoint-sm){
+              margin-bottom: 32px;
+              font-weight: 700;
+              font-size: 31px;
+              line-height: 36px;
+              word-wrap: break-word;
+            }
+          }
+        }
+    
+        .button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          width: 300px;
+          max-width: 380px;
+          transition-duration: 0.2s;
+          height: 40px;
+          min-height: 36px;
+          min-width: 36px;
+          cursor: pointer;
+          padding-left: 16px;
+          padding-right: 16px;
+          display: flex;
+          flex: 1 1 auto;
+        }
+    
+        .signUpButton {
+          background-color: rgb(29, 155, 240);
+          margin-bottom: 16px;
+    
+          &:hover {
+            background-color: rgb(26, 140, 216);
+          }
+    
+          .signUpText {
+            color: rgb(255, 255, 255);
+            font-weight: 700;
+            line-height: 20px;
+            word-wrap: break-word;
+            text-align: center;
+            font-size: 15px;
+          }
+        }
+    
+        .signInContainer {
+          margin-top: 40px;
+          
+          .subTitle2 {
+            color: rgb(15, 20, 25);
+            margin-bottom: 16px;
+            line-height: 20px;
+            word-wrap: break-word;
+            min-width: 0px;
+            font-weight: 700;
+            text-align: inherit;
+            font-size: 17px;
+
+            @include global.respond(local.$breakpoint-sm) {
+              max-width: 380px;
+              flex: 1;
+            }
+          }
+    
+          .signInButton {
+            border: 1px solid rgb(207, 217, 222);
+            
+            &:hover {
+              background-color: rgba(29,155,240,0.1);
+            }
+            
+            .signInText {
+              color: rgb(29, 155, 240);
+              font-weight: 700;
+              line-height: 20px;
+              word-wrap: break-word;
+              text-align: center;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      .logoContainer {
+        display: none;
+        flex: 1;
+      }
+
+      // @include global.respond(local.$breakpoint-lg) {
+      //   .logoContainer {
+      //     display: flex;
+      //     min-height: 45vh;
+      //     flex: 1;
+
+      //     .logoWrapper {
+      //       position: absolute;
+      //       right: 0;
+      //       top: 0;
+      //       bottom: 0;
+      //       left: 0;
+      //       justify-content: center;
+      //       flex: 1;
+      //       color: rgb(15, 20, 25);
+            
+      //       .logo {
+      //         position: relative;
+      //         display: inline-block;
+      //         padding: 32px;
+      //         max-height: 380px;
+      //         height: 50%;
+      //         max-width: 100%;
+      //         justify-content: center;
+      //         vertical-align: text-bottom;
+      //         color: inherit;
+      //       }
+      //     }
+      //   }
+      // }
+    }
+  }
+
+}
+@media all and (min-width: 1000px) {
+  .container {
+      padding: 0;
+  }
+}

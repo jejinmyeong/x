@@ -1,4 +1,4 @@
-import styles from '@/app/(beforeLogin)/_component/main.module.css';
+import styles from "@/app/(beforeLogin)/_component/main.module.scss";
 
 export default function BeforeLoginLayout({ children, modal }) {
   return (
@@ -6,5 +6,5 @@ export default function BeforeLoginLayout({ children, modal }) {
       {children}
       {modal}
     </div>
-  )
+  );
 }

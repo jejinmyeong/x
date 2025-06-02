@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-
-const inter = Inter({ subsets: ['latin'] })
+import "@/styles/main.scss";
 
 export const metadata: Metadata = {
   title: "X. 무슨 일이 일어나고 있나요? / X",
@@ -16,9 +12,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" >
-      <body className={`${inter.className}`}>
-        {children}
+    <html lang="en">
+      <body>
+        <div id="react-root">{children}</div>
       </body>
     </html>
   );
