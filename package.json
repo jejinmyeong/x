@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.7.0",
+    "classnames": "^2.5.1",
     "next": "15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -23,7 +24,9 @@
     "eslint": "^9",
     "eslint-config-next": "15.3.0",
     "msw": "^2.7.5",
-    "typescript": "^5"
+    "sass": "^1.89.0",
+    "typescript": "^5",
+    "typescript-plugin-css-modules": "^5.1.0"
   },
   "msw": {
     "workerDirectory": [
