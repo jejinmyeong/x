@@ -1,10 +1,17 @@
 import styles from "@/app/(beforeLogin)/_component/main.module.scss";
+import ViewModeController from "./_component/ViewModeController";
 
-export default function BeforeLoginLayout({ children, modal }) {
+interface BeforeLoginLayoutProps extends React.PropsWithChildren {
+  modal: React.ReactNode;
+}
+
+export default function BeforeLoginLayout({
+  children,
+  modal,
+}: BeforeLoginLayoutProps) {
   return (
     <div className={styles.container}>
-      {children}
-      {modal}
+      <ViewModeController modal={modal}>{children}</ViewModeController>
     </div>
   );
 }
