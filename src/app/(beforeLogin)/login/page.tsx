@@ -1,22 +1,15 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import React from "react";
 import Main from "../_component/Main";
-import React, { useEffect } from "react";
-import { useIsModalView } from "@/hooks/useIsModalView";
+import RedirectToLogin from "./_component/RedirectToLogin";
+import ResponsiveView from "../_component/ResponsiveView";
 
 export default function LoginPage() {
-  const router = useRouter();
-  const isModalView = useIsModalView();
-
-  useEffect(() => {
-    router.replace("/i/flow/login");
-  }, [router]);
-
   return (
     <React.Fragment>
-      {isModalView && <Main />}
-      {!isModalView && <div>hello</div>}
+      <RedirectToLogin />
+      <ResponsiveView responsiveChildren={<div>hello</div>}>
+        <Main />
+      </ResponsiveView>
     </React.Fragment>
   );
 }

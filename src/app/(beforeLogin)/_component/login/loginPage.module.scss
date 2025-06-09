@@ -1,0 +1,59 @@
+.container {
+  flex-grow: 1;
+}
+
+.headerContainer {
+  height: 53px;
+  backdrop-filter: blur(12px);
+}
+
+.headerWrapper {
+  height: 53px;
+  max-width: 600px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.headerSide {
+  min-width: 56px;
+  flex-basis: 50%;
+  align-items: flex-start;
+  align-self: stretch;
+  flex-shrink: 1;
+  justify-content: center;
+  flex-grow: 1;
+  min-height: 32px;
+}
+
+.headerLogoContainer {
+  flex-shrink: 1;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.headerLogoWrapper {
+  align-items: stretch;
+  min-width: 32px;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+
+  & > svg {
+    height: 1.75rem;
+    fill: currentColor;
+    vertical-align: text-bottom;
+    max-width: 100%;
+    position: relative;
+    counter-reset: rgba(15, 20, 25, 1.00);
+    flex-grow: 1;
+    display: inline-block;
+  }
+}

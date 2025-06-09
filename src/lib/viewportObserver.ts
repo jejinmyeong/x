@@ -9,6 +9,7 @@ export function initViewportObserver() {
 
   const store = useViewportStore.getState();
   const setIsModalView = store.setIsModalView;
+  const setIsinit = store.setIsInit;
   const currentRef = { current: window.innerWidth <= 702 };
 
   setIsModalView(currentRef.current);
@@ -27,7 +28,10 @@ export function initViewportObserver() {
         setIsModalView(false);
       })
     }
+
+    setIsinit(true);
   }
 
+  onResize();
   window.addEventListener('resize', onResize);
 }

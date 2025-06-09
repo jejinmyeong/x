@@ -1,11 +1,13 @@
+import { useEffect } from "react";
 import { initViewportObserver } from "@/lib/viewportObserver";
 import { useViewportStore } from "@/stores/useViewPortStore";
-import { useEffect } from "react";
 
 export function useIsModalView() {
+  const isInit = useViewportStore((state) => state.isInit);
+  const isModalView = useViewportStore((state) => state.isModalView);
+
   useEffect(() => {
     initViewportObserver();
   }, [])
-
-  return useViewportStore((state) => state.isModalView);
+  return {isInit, isModalView};
 }
