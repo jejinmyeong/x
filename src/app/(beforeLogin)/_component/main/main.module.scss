@@ -1,13 +1,14 @@
 @use '@/styles/abstracts' as global;
-@use '../_styles/abstracts/beforelogin.variables' as local;
+@use '../../_styles/abstracts/beforelogin.variables' as local;
+
+.main {
+  width: 100%;
+  min-height: 100dvh;
+}
 
 .container {
   flex-shrink: 1;
   flex-grow: 1;
-
-  @include global.respond(local.$breakpoint-lg) {
-    min-height: 100dvh;
-  }
 }
 
 .wrapper {
@@ -17,14 +18,6 @@
 .inner {
   min-height: auto;
 
-  @include global.respond(local.$breakpoint-sm) {
-    min-width: 45vw;
-    max-width: 600px;
-    justify-content: center;
-    width: 100%;
-    padding: 16px;
-    margin: auto;
-  }
   @include global.respond(local.$breakpoint-lg) {
     flex-direction: row-reverse;
     flex: 1 1 auto;
@@ -42,6 +35,17 @@
   padding: 16px;
   justify-content: center;
   min-width: 45vw;
+  max-width: 600px;
+  width: 100%;
+  
+  @include global.respond(local.$breakpoint-sm) {
+    margin: auto;
+  }
+  @include global.respond(local.$breakpoint-lg) {
+    margin: 0px;
+    max-width: initial;
+    flex: 1;
+  }
 }
 
 .mobileLogo {
@@ -49,6 +53,7 @@
   padding-bottom: 12px;
   align-self: flex-start;
   max-width: 100%;
+  box-sizing: border-box;
 
   @include global.respond(local.$breakpoint-lg) {
     display: none;
@@ -203,6 +208,7 @@
 }
 
 .logo {
+  box-sizing: border-box;
   @include global.respond(local.$breakpoint-lg) {
     position: relative;
     display: inline-block;

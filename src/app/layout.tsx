@@ -12,9 +12,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      dir="ltr"
+      lang="ko"
+      style={{
+        overflow: "auto scroll",
+        overscrollBehaviorY: "none",
+        fontSize: "15px",
+        colorScheme: "light",
+      }}
+    >
       <body>
-        <div id="react-root">{children}</div>
+        <div id="react-root" style={{ height: "100%", display: "flex" }}>
+          {children}
+        </div>
       </body>
     </html>
   );

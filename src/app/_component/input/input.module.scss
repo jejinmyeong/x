@@ -1,0 +1,116 @@
+.inputBlock {
+  width: 100%;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.inputLabel {
+  border: 1px solid rgb(207, 217, 222);
+  border-radius: 4px;
+  flex-direction: row;
+}
+.inputLabel:has(input:focus) {
+  box-shadow: rgb(29, 155, 240) 0px 0px 0px 1px;
+  border-color: rgb(29, 155, 240);
+}
+.labelTextWrapper {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.labelTextInner {
+  width: 100%;
+  flex-direction: row;
+  height: 100%;
+  position: absolute;
+  justify-content: space-between;
+}
+.labelTextBox {
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  white-space: pre-wrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-left: 8px;
+  padding-right: 8px;
+  line-height: 24px;
+  font-weight: 400;
+  font-size: 17px;
+  text-align: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0px;
+  max-width: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  word-wrap: break-word;
+  padding-top: 16px;
+  transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1), color 150ms cubic-bezier(0.4, 0, 0.2, 1), font-size 150ms cubic-bezier(0.4, 0, 0.2, 1), padding-top 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgb(83, 100, 113);
+}
+.inputLabel:has(input:focus) .labelTextBox {
+  color: rgb(29, 155, 240);
+  font-size: small;
+  padding-top: 8px;
+  line-height: 16px;
+}
+.labelText {
+  color: inherit;
+  display: inline;
+  font: inherit;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: inherit;
+  min-width: 0px;
+  word-wrap: break-word;
+}
+.inputWrapper {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding-left: 8px;
+  padding-right: 8px;
+  flex-grow: 1;
+  flex-direction: row;
+  flex-shrink: 1;
+  padding-top: 12px;
+  margin-top: 16px;
+  padding-bottom: 8px;
+}
+.inputInner {
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  display: flex;
+  line-height: 24px;
+  width: 100%;
+  font-weight: 400;
+  align-items: center;
+  font-size: 17px;
+  text-align: inherit;
+  min-width: 0px;
+  word-wrap: break-word;
+  color: rgb(15, 20, 25);
+}
+.input {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  resize: none;
+  appearance: none;
+  text-align: left;
+  box-sizing: border-box;
+  outline-style: none;
+  width: 100%;
+  border-radius: 0px;
+  border-width: 0px;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.00);
+}

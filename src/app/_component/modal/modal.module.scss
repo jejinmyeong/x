@@ -1,0 +1,35 @@
+.modalGroup {
+  width: 100vw;
+  top: 0px;
+  position: fixed;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal {
+  background-color: rgb(var(--background-end-rgb));
+  position: absolute;
+  max-width: 80vw;
+  min-width: 600px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+}
+
+.modalBody {
+  max-width: 600px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

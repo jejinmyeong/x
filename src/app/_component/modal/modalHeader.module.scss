@@ -1,0 +1,76 @@
+.header {
+  padding: 0 16px;
+  font-size: 31px;
+  font-weight: bold;
+  height: 53px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.headerSide {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  flex-basis: 50%;
+  min-width: 56px;
+  align-items: flex-start;
+  align-self: stretch;
+  justify-content: center;
+  flex-grow: 1;
+  min-height: 32px;
+}
+
+.closeButton {
+  min-width: 36px;
+  min-height: 36px;
+  outline-style: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.closeButton:hover {
+  background-color: rgba(15,20,25, 0.1);
+}
+
+.closeButtonIconWrapper {
+  align-items: center;
+  justify-content: center;
+
+  & > svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.logo {
+  flex-shrink: 1;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.logoBox{
+  align-self: stretch;
+  min-width: 32px;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+
+  & > svg {
+    position: relative;
+    fill: currentColor;
+    color: rgb(15, 20, 25);
+    height: 1.75rem;
+    flex-grow: 1;
+    max-width: 100%;
+  } 
+}
+

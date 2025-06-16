@@ -1,15 +1,12 @@
 import React from "react";
-import Main from "../_component/Main";
+import Main from "../_component/main/Main";
 import RedirectToLogin from "./_component/RedirectToLogin";
-import ResponsiveView from "../_component/ResponsiveView";
 
-export default function LoginPage() {
+export default function Login() {
   return (
     <React.Fragment>
       <RedirectToLogin />
-      <ResponsiveView responsiveChildren={<div>hello</div>}>
-        <Main />
-      </ResponsiveView>
+      <Main />
     </React.Fragment>
   );
 }
